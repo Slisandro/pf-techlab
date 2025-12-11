@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS products (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    description VARCHAR(500),
+    price DECIMAL(10,2) NOT NULL,
+    category VARCHAR(100),
+    stock INTEGER DEFAULT 0,
+    deleted BOOLEAN DEFAULT FALSE,
+    deleted_date DATE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
